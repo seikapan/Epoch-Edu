@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geologic Time Scale Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Geologic Time Scale</h1>
+    <div id="mode-buttons">
+        <button onclick="showMode('learn')">Learn from Scratch</button>
+        <button onclick="showMode('practice')">Practice Your Knowledge</button>
+        <button onclick="showMode('test')">Test Yourself</button>
+    </div>
+
+    <div id="learn" class="mode">
+        <button onclick="printTable()">Print</button>
+        <table id="geologic-table">
+            <tr>
+                <th>Eon</th>
+                <th>Era</th>
+                <th>Period</th>
+                <th>Epoch</th>
+            </tr>
+            <tr>
+                <td rowspan="7" style="background-color: #FBE4D5;">Phanerozoic</td>
+                <td rowspan="7" style="background-color: #FAD7A0;">Cenozoic</td>
+                <td rowspan="2" class="dropzone" data-correct="quaternary">Quaternary</td>
+                <td>Holocene</td>
+            </tr>
+            <tr>
+                <td>Pleistocene</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="dropzone" data-correct="neogene">Neogene</td>
+                <td>Pliocene</td>
+            </tr>
+            <tr>
+                <td>Miocene</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="dropzone" data-correct="paleogene">Paleogene</td>
+                <td>Oligocene</td>
+            </tr>
+            <tr>
+                <td>Eocene</td>
+            </tr>
+            <tr>
+                <td>Paleocene</td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="background-color: #AED6F1;">Phanerozoic</td>
+                <td rowspan="3" style="background-color: #85C1E9;">Mesozoic</td>
+                <td class="dropzone" data-correct="cretaceous">Cretaceous</td>
+                <td rowspan="3">~</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="jurassic">Jurassic</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="triassic">Triassic</td>
+            </tr>
+            <tr>
+                <td rowspan="7" style="background-color: #D2B4DE;">Phanerozoic</td>
+                <td rowspan="7" style="background-color: #BB8FCE;">Paleozoic</td>
+                <td class="dropzone" data-correct="permian">Permian</td>
+                <td rowspan="7">~</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="pennsylvanian">Pennsylvanian</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="mississippian">Mississippian</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="devonian">Devonian</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="silurian">Silurian</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="ordovician">Ordovician</td>
+            </tr>
+            <tr>
+                <td class="dropzone" data-correct="cambrian">Cambrian</td>
+            </tr>
+            <tr>
+                <td style="background-color: #F5B7B1;">Proterozoic</td>
+                <td colspan="2">~</td>
+            </tr>
+            <tr>
+                <td style="background-color: #F1948A;">Archean</td>
+                <td colspan="2">~</td>
+            </tr>
+            <tr>
+                <td style="background-color: #EC7063;">Hadean</td>
+                <td colspan="2">~</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function printTable() {
+            var printWindow = window.open('', '_blank');
+            printWindow.document.write('<html><head><title>Print Geologic Table</title></head><body>');
+            printWindow.document.write(document.getElementById('geologic-table').outerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

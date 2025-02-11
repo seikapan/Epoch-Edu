@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#mode-buttons button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mode {
+    display: none;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Table Styling */
+#geologic-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#geologic-table th, #geologic-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#geologic-table th {
+    background-color: #ccc;
+}
+
+/* Drag-and-Drop Styling */
+.draggable {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    margin: 5px;
+    cursor: grab;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.dropzone {
+    width: 150px;
+    height: 30px;
+    border: 2px dashed #333;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
